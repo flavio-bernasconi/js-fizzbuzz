@@ -2,6 +2,8 @@
 
 var tre = 'fizz';
 var cinque = 'buzz';
+var entrambi = 'fizzbuzz';
+
 var contenuto;
 
 for (var i = 1; i <= 100; i++) {
@@ -12,7 +14,7 @@ for (var i = 1; i <= 100; i++) {
   // se il resto di buzz e fuzz è 0 per entrambi
   //stampo fuzz e buzz e skippo di uno l-indice
   if (buzz == 0 && fuzz == 0) {
-    console.log(i,tre,cinque);
+    console.log(i,entrambi);
     //stampo in pagina un li
     contenuto = document.getElementById('numero').innerHTML;
     document.getElementById('numero').innerHTML  = contenuto + "<li>" + i + " " + tre + cinque + "</li>";
@@ -20,7 +22,7 @@ for (var i = 1; i <= 100; i++) {
     continue;
   }
   // se il resto fuzz 3 è uguale a 0  stampo fuzz
-  if (fuzz == 0) {
+  else if (fuzz == 0) {
     console.log( i,tre);
     //stampo in pagina un li
     contenuto = document.getElementById('numero').innerHTML;
@@ -28,16 +30,15 @@ for (var i = 1; i <= 100; i++) {
 
   }
   // se il resto buzz 5 è uguale a 0  stampo buzz
-  if (buzz == 0) {
+  else if (buzz == 0) {
     console.log( i,cinque);
     //stampo in pagina un li
     contenuto = document.getElementById('numero').innerHTML;
     document.getElementById('numero').innerHTML  = contenuto + "<li>" + i + " " + cinque + "</li>";
 
   }
-
   // se il resto è diverso da 0 sia per 5 che 3 allora stampo l-indice
-  if (buzz != 0 && fuzz != 0) {
+  else{
     console.log(i);
     contenuto = document.getElementById('numero').innerHTML;
     document.getElementById('numero').innerHTML  = contenuto + "<li>" + i + " " + "</li>";

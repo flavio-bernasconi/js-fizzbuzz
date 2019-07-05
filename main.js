@@ -11,7 +11,7 @@ for (var i = 1; i <= 100; i++) {
   //stampo fuzz e buzz e skippo di uno l-indice
   if (buzz == 0 && fuzz == 0) {
     console.log(i,entrambi);
-    continue;
+    // continue;
   }
   // se il resto fuzz 3 è uguale a 0  stampo fuzz
   else if (fuzz == 0) {
